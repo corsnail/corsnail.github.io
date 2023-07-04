@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  
+  
+  <link href="https://corsnail.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://corsnail.github.io/"/>
+  <updated>2023-07-04T05:34:05.676Z</updated>
+  <id>https://corsnail.github.io/</id>
+  
+  <author>
+    <name>snail</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo使用</title>
+    <link href="https://corsnail.github.io/2023/07/04/hexo%E4%BD%BF%E7%94%A8/"/>
+    <id>https://corsnail.github.io/2023/07/04/hexo%E4%BD%BF%E7%94%A8/</id>
+    <published>2023-07-04T03:07:11.000Z</published>
+    <updated>2023-07-04T05:34:05.676Z</updated>
+    
+    <content type="html"><![CDATA[<p>hexo g  # 生成博客网页文件<br>hexo s  # 本地预览博客<br>hexo d  # 上传网页文件到github</p><p>hexo new post “article title” #新建文章</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;hexo g  # 生成博客网页文件&lt;br&gt;hexo s  # 本地预览博客&lt;br&gt;hexo d  # 上传网页文件到github&lt;/p&gt;
+&lt;p&gt;hexo new post “article title” #新建文章&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="hexo" scheme="https://corsnail.github.io/categories/hexo/"/>
+    
+    
+    <category term="hexo" scheme="https://corsnail.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>你好</title>
+    <link href="https://corsnail.github.io/2023/06/06/%E4%BD%A0%E5%A5%BD/"/>
+    <id>https://corsnail.github.io/2023/06/06/%E4%BD%A0%E5%A5%BD/</id>
+    <published>2023-06-06T12:21:35.000Z</published>
+    <updated>2023-06-06T12:22:06.053Z</updated>
+    
+    <content type="html"><![CDATA[<p>hello!</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;hello!&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
