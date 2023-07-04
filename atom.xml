@@ -6,7 +6,7 @@
   <link href="https://corsnail.github.io/atom.xml" rel="self"/>
   
   <link href="https://corsnail.github.io/"/>
-  <updated>2023-07-04T13:55:04.476Z</updated>
+  <updated>2023-07-04T05:34:05.676Z</updated>
   <id>https://corsnail.github.io/</id>
   
   <author>
@@ -15,27 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title></title>
-    <link href="https://corsnail.github.io/2023/07/04/linux%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
-    <id>https://corsnail.github.io/2023/07/04/linux%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</id>
-    <published>2023-07-04T08:41:11.222Z</published>
-    <updated>2023-07-04T13:55:04.476Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="遇见问题"><a href="#遇见问题" class="headerlink" title="遇见问题"></a>遇见问题</h2><p>在使用fscan的过程中，需要把源码下载下来编译，编译之后是一个可执行文件而使用时就需要</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./main -h 192.168.1.133/24</span><br></pre></td></tr></table></figure><p><img src="https://corsnail.github.io/image/20230704/linux%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/0.png"><br>于是我就想将可执行文件添加到环境变量中</p><h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><ol><li>打开配置文件，看终端，可能是bashrc，我的是zshrc<br><img src="https://corsnail.github.io/image/20230704/linux%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/1.png"></li><li>在末尾加入一行，&#x2F;path&#x2F;to&#x2F;fscan是你的fscan目录路径，刚编译好的fscan需要改个名<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH=/path/to/fscan:$PATH</span><br></pre></td></tr></table></figure><img src="https://corsnail.github.io/image/20230704/linux%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/2.png"></li><li>然后记得更新<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.zshrc</span><br></pre></td></tr></table></figure>然后就可以在终端的任何地方使用fscan了<br><img src="https://corsnail.github.io/image/20230704/linux%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/3.png"></li></ol><p>其实不止这一种方法，添加进不同的位置有不同的作用，可以参考：<br><a href="https://blog.csdn.net/weixin_38870322/article/details/80169531">https://blog.csdn.net/weixin_38870322/article/details/80169531</a></p><p>另外还有个思路，linux会有一个文件夹（&#x2F;bin）专门放可执行文件，linux环境变量会加入这个文件夹的全部变量，输入下面命令可以看到</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo $PATH</span><br></pre></td></tr></table></figure><p><img src="https://corsnail.github.io/image/20230704/linux%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/4.png"><br>有很多个目录，建议不要打乱它本身的秩序，具体不同分类的区别可以看下面<br><a href="https://blog.csdn.net/lh2016rocky/article/details/70801030">https://blog.csdn.net/lh2016rocky/article/details/70801030</a><br>总结就是：</p><blockquote><p>重要的二进制位于 &#x2F;bin（用户二进制）以及 &#x2F;sbin（系统二进制）中。不重要的二进制（如图形环境或Office 工具）安装在 &#x2F;usr&#x2F;bin 和 &#x2F;usr&#x2F;sbin中。进行这种分隔是为了尽可能地缩小根分区。使用源代码编译的软件通常位于 &#x2F;usr&#x2F;local&#x2F;bin 和 &#x2F;usr&#x2F;local&#x2F;sbin中。</p></blockquote><p>所以这里我们的fscan应该放到&#x2F;usr&#x2F;local&#x2F;bin中，<br>直接</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo cp /home/kali/fscan/fscan /usr/local/bin</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>记得sudo<br><img src="https://corsnail.github.io/image/20230704/linux%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/5.png"><br>这样去掉环境变量中的fscan目录，也可以使用<br><img src="https://corsnail.github.io/image/20230704/linux%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/6.png"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;遇见问题&quot;&gt;&lt;a href=&quot;#遇见问题&quot; class=&quot;headerlink&quot; title=&quot;遇见问题&quot;&gt;&lt;/a&gt;遇见问题&lt;/h2&gt;&lt;p&gt;在使用fscan的过程中，需要把源码下载下来编译，编译之后是一个可执行文件而使用时就需要&lt;/p&gt;
-&lt;figure class</summary>
-      
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>hexo使用</title>
@@ -60,6 +39,31 @@
     
     
     <category term="hexo" scheme="https://corsnail.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo使用</title>
+    <link href="https://corsnail.github.io/2023/07/04/linux%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
+    <id>https://corsnail.github.io/2023/07/04/linux%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</id>
+    <published>2023-07-04T03:07:11.000Z</published>
+    <updated>2023-07-04T13:58:02.769Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="遇见问题"><a href="#遇见问题" class="headerlink" title="遇见问题"></a>遇见问题</h2><p>在使用fscan的过程中，需要把源码下载下来编译，编译之后是一个可执行文件而使用时就需要</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./main -h 192.168.1.133/24</span><br></pre></td></tr></table></figure><p><img src="https://corsnail.github.io/image/20230704/linux%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/0.png"><br>于是我就想将可执行文件添加到环境变量中</p><h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><ol><li>打开配置文件，看终端，可能是bashrc，我的是zshrc<br><img src="https://corsnail.github.io/image/20230704/linux%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/1.png"></li><li>在末尾加入一行，&#x2F;path&#x2F;to&#x2F;fscan是你的fscan目录路径，刚编译好的fscan需要改个名<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH=/path/to/fscan:$PATH</span><br></pre></td></tr></table></figure><img src="https://corsnail.github.io/image/20230704/linux%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/2.png"></li><li>然后记得更新<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.zshrc</span><br></pre></td></tr></table></figure>然后就可以在终端的任何地方使用fscan了<br><img src="https://corsnail.github.io/image/20230704/linux%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/3.png"></li></ol><p>其实不止这一种方法，添加进不同的位置有不同的作用，可以参考：<br><a href="https://blog.csdn.net/weixin_38870322/article/details/80169531">https://blog.csdn.net/weixin_38870322/article/details/80169531</a></p><p>另外还有个思路，linux会有一个文件夹（&#x2F;bin）专门放可执行文件，linux环境变量会加入这个文件夹的全部变量，输入下面命令可以看到</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo $PATH</span><br></pre></td></tr></table></figure><p><img src="https://corsnail.github.io/image/20230704/linux%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/4.png"><br>有很多个目录，建议不要打乱它本身的秩序，具体不同分类的区别可以看下面<br><a href="https://blog.csdn.net/lh2016rocky/article/details/70801030">https://blog.csdn.net/lh2016rocky/article/details/70801030</a><br>总结就是：</p><blockquote><p>重要的二进制位于 &#x2F;bin（用户二进制）以及 &#x2F;sbin（系统二进制）中。不重要的二进制（如图形环境或Office 工具）安装在 &#x2F;usr&#x2F;bin 和 &#x2F;usr&#x2F;sbin中。进行这种分隔是为了尽可能地缩小根分区。使用源代码编译的软件通常位于 &#x2F;usr&#x2F;local&#x2F;bin 和 &#x2F;usr&#x2F;local&#x2F;sbin中。</p></blockquote><p>所以这里我们的fscan应该放到&#x2F;usr&#x2F;local&#x2F;bin中，<br>直接</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo cp /home/kali/fscan/fscan /usr/local/bin</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>记得sudo<br><img src="https://corsnail.github.io/image/20230704/linux%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/5.png"><br>这样去掉环境变量中的fscan目录，也可以使用<br><img src="https://corsnail.github.io/image/20230704/linux%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/6.png"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;遇见问题&quot;&gt;&lt;a href=&quot;#遇见问题&quot; class=&quot;headerlink&quot; title=&quot;遇见问题&quot;&gt;&lt;/a&gt;遇见问题&lt;/h2&gt;&lt;p&gt;在使用fscan的过程中，需要把源码下载下来编译，编译之后是一个可执行文件而使用时就需要&lt;/p&gt;
+&lt;figure class</summary>
+      
+    
+    
+    
+    <category term="技术分享" scheme="https://corsnail.github.io/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="linux" scheme="https://corsnail.github.io/tags/linux/"/>
     
   </entry>
   

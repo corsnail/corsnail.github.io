@@ -8,4 +8,6 @@ https://corsnail.github.io/categories/index.html
 https://corsnail.github.io/2023/06/06/%E4%BD%A0%E5%A5%BD/
 https://corsnail.github.io/
 https://corsnail.github.io/tags/hexo/
+https://corsnail.github.io/tags/linux/
 https://corsnail.github.io/categories/hexo/
+https://corsnail.github.io/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/
