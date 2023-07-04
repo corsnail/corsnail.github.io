@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://corsnail.github.io/about/index.html</loc>
+    
+    <lastmod>2023-07-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://corsnail.github.io/2023/07/04/hexo%E4%BD%BF%E7%94%A8/</loc>
     
     <lastmod>2023-07-04</lastmod>
@@ -39,15 +48,6 @@
   
   <url>
     <loc>https://corsnail.github.io/categories/index.html</loc>
-    
-    <lastmod>2023-06-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://corsnail.github.io/about/index.html</loc>
     
     <lastmod>2023-06-08</lastmod>
     
