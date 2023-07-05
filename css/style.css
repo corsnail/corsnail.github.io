@@ -371,7 +371,7 @@ h6,
   font-family: inherit;
   font-weight: 500;
   line-height: 1.1;
-  color: inherit;
+  color: #0076a2;
 }
 
 h1 small,
@@ -3258,12 +3258,12 @@ body {
   font-family: "PingHei","PingFang SC",Helvetica Neue,"Work Sans","Hiragino Sans GB","Microsoft YaHei",SimSun,sans-serif;
   font-size: 14px;
   line-height: 1.57143;
-  color: #333333;
-  background-color: #000000;
+  color: #0076a2;
+  background-color: #253449;
 }
 
 a {
-  color: #333333;
+  color: #e8e8e8;
   text-decoration: none;
 }
 
@@ -3367,7 +3367,7 @@ svg {
  *---------------------------------------------------*/
 
 .text-dark {
-  color: #333 !important;
+  color: #fff !important;
 }
 
 .text-grey {
@@ -4643,7 +4643,7 @@ input[type="search"] {
   font-size: 75%;
   font-weight: bold;
   line-height: 1;
-  color: #777777;
+  color: #e8e8e8;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
@@ -4667,7 +4667,7 @@ a.label:focus {
 }
 
 .label-default {
-  background-color: #eeeeee;
+  background-color: #2e73ac;;
 }
 
 .label-default[href]:hover,
@@ -4727,7 +4727,7 @@ a.label:focus {
 
 .panel {
   margin-bottom: 21px;
-  background-color: #fff;
+  background-color: #253449;
   border: 1px solid #f2f2f2;
 }
 
@@ -4746,6 +4746,7 @@ a.label:focus {
 
 .panel-body {
   padding: 15px;
+  background-color: #253449;
 }
 
 .panel-body:before,
@@ -4788,6 +4789,7 @@ a.label:focus {
   border-top: 1px solid #f2f2f2;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
+  background-color: #253449;
 }
 
 /**
@@ -4797,6 +4799,7 @@ a.label:focus {
 .panel.b-no {
   border: 0;
   margin-bottom: 0;
+  background-color: #253449
 }
 
 .panel.b-no .panel-heading,
@@ -5649,11 +5652,11 @@ pre code {
 /* Hide for mobile, show later */
 
 .header {
-  background-color: #fbfbfb;
+  background-color: #253449;
 }
 
 .sidebar {
-  background-color: #fdfdfd;
+  background-color: #253449;
 }
 
 .sidebar .slimContent {
@@ -5967,7 +5970,7 @@ body.no-sidebar .sidebar {
 
 .widget .widget-title {
   font-size: 18px;
-  color: #000;
+  color: #0076a2;
 }
 
 .widget time {
@@ -6091,7 +6094,7 @@ body.no-sidebar .sidebar {
   padding: .3em .6em;
   font-size: 75% !important;
   line-height: 1;
-  background-color: #eee;
+  background-color: #2e73ac;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
@@ -6426,7 +6429,7 @@ body.no-sidebar .sidebar {
   display: block;
   -webkit-transition: .25s;
   transition: .25s;
-  color: #777777;
+  color: #e8e8e8;
 }
 
 .collection a:not(.active):hover {
@@ -6677,7 +6680,7 @@ body.okayNav-loaded {
 }
 
 .okayNav a {
-  color: #2e2e33;
+  color: #42a5f5;
   font-weight: 400;
 }
 
