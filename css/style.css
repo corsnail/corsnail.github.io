@@ -484,6 +484,7 @@ h6,
 }
 
 p {
+  color: #fafafa;
   margin: 0 0 10.5px;
 }
 
@@ -715,7 +716,7 @@ blockquote {
   margin: 0 0 21px;
   border: 1px dotted #eeeeee;
   border-left: 3px solid #eeeeee;
-  background-color: #fbfbfb;
+  background-color: #253449;
 }
 
 blockquote p:last-child,
@@ -3258,7 +3259,7 @@ body {
   font-family: "PingHei","PingFang SC",Helvetica Neue,"Work Sans","Hiragino Sans GB","Microsoft YaHei",SimSun,sans-serif;
   font-size: 14px;
   line-height: 1.57143;
-  color: #0076a2;
+  color: #fafafa;
   background-color: #253449;
 }
 
@@ -5530,12 +5531,12 @@ pre .js .function {
 
 pre,
 .highlight {
-  background: #fafafa;
+  background: #3b485b;
   margin: 10px 0;
   padding: 15px 10px;
   overflow: auto;
   font-size: 13px;
-  color: #4d4d4c;
+  color: #fafafa;
   line-height: 1.5;
 }
 
