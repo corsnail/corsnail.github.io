@@ -7109,6 +7109,7 @@ body.okayNav-loaded {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  color: #000
 }
 
 .ins-section .ins-search-item header .icon {
