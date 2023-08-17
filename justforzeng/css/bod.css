@@ -1,0 +1,93 @@
+body{
+margin: 0;
+padding: 0;
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        background-image: linear-gradient(125deg,#1abc9c,#3498db,#e74c3c,#9b59b6,#f39c12,#d35400,#aee2e5,#558bc2,#8e44ad,#27ae60,#2980b9);
+        color: #FFFFFF;
+        background-size: 400%;
+        animation: bgmove 1.5s;
+        animation-iteration-count: infinite ;
+    }
+    @keyframes bgmove{
+        0%{
+        
+            background-position: 25% 50%;
+        }   
+        25%{background-position: 50% 100%;
+    }
+    50%{background-position: 75% 50%;
+    }
+    100%{background-position: 100% 100%;
+    }
+}
+.enter{
+    width: 1200px;
+    height: 100vh;
+}
+.haha{
+    display: flex;
+}
+
+.top{
+    padding: auto;
+    margin: 0px;
+    width: 100%;
+    height: 50px;
+    font-size: 40px;
+    padding:0;
+    letter-spacing: 3px;
+    color: rgb(7, 7, 8);
+}
+.mod{
+    align-self: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: auto;
+    margin: 20px 0;
+    letter-spacing: 2px;
+    font-size: 30px;
+    color: rgb(7, 7, 8);
+    width: 800px;
+     height: 150px;
+   
+}
+
+.beside1{
+    display: inline;
+    writing-mode: vertical-rl; /* 设置文字竖向排列 */
+    text-orientation: upright; /* 保持文字正立 */
+    white-space: nowrap; 
+    align-content: center;
+    margin-right: auto;
+    float: left;
+    height: 150px;
+    width: 100px;
+    font-size: 80px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(48, 198, 209);
+    text-align: left;
+
+}
+.beside2{
+    display: inline;
+    writing-mode: vertical-rl; /* 设置文字竖向排列 */
+    text-orientation: upright; /* 保持文字正立 */
+    white-space: nowrap; 
+    align-content: center;
+    margin-left: auto;
+    float: right;
+    height: 150px;
+    width: 100px;
+    font-size: 80px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(48, 198, 209);
+    text-align: left;
+
+}
+.end{
+    margin: auto;
+    margin-top: 0;
+    height: 350px;
+    width: 350px;
+}
