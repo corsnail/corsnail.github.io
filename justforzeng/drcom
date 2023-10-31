@@ -1,0 +1,15 @@
+server = '10.1.1.254'
+username = 'B20220302311'
+password = '302311'
+CONTROLCHECKSTATUS = '\x20'
+ADAPTERNUM = '\x08'
+host_ip = '172.17.10.4'
+IPDOG = '\x01'
+host_name = 'fuyumi'
+PRIMARY_DNS = '218.196.40.9'
+dhcp_server = '218.196.40.8'
+AUTH_VERSION = '\x27\x00'
+mac = 0x207bd2372192
+host_os = 'Windows 10'
+KEEP_ALIVE_VERSION = '\xdc\x02'
+ror_version = True
