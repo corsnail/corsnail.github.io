@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://corsnail.github.io/2023/11/07/z3%E6%B1%82%E8%A7%A3%E5%99%A8%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2023-11-07</lastmod>
+  </url>
+  <url>
     <loc>https://corsnail.github.io/2023/07/20/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%987-20kandane/</loc>
     <lastmod>2023-07-20</lastmod>
   </url>
