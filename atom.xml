@@ -6,7 +6,7 @@
   <link href="https://corsnail.github.io/atom.xml" rel="self"/>
   
   <link href="https://corsnail.github.io/"/>
-  <updated>2024-03-27T04:31:32.929Z</updated>
+  <updated>2024-04-19T07:17:40.934Z</updated>
   <id>https://corsnail.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>pikachu之暴力破解</title>
+    <link href="https://corsnail.github.io/2024/04/19/pikachu%E4%B9%8B%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3/"/>
+    <id>https://corsnail.github.io/2024/04/19/pikachu%E4%B9%8B%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3/</id>
+    <published>2024-04-19T07:15:24.000Z</published>
+    <updated>2024-04-19T07:17:40.934Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="基于表单的暴力破解"><a href="#基于表单的暴力破解" class="headerlink" title="基于表单的暴力破解"></a>基于表单的暴力破解</h1><p><img src="/images/article/20240419/Pasted%20image%2020240415142706.png"><br>bp 抓包放入爆破器<br><img src="/images/article/20240419/Pasted%20image%2020240415143035.png"><br>选择交叉爆破<br><img src="/images/article/20240419/Pasted%20image%2020240415142926.png"><br>分别都导入字典，然后 start attack<br><img src="/images/article/20240419/Pasted%20image%2020240415143128.png"><br>爆出来三组账号密码<br>admin 123456<br>test abc123<br>pikachu 000000<br>当然这里字典是针对性加的</p><h1 id="验证码绕过（on-server）"><a href="#验证码绕过（on-server）" class="headerlink" title="验证码绕过（on server）"></a>验证码绕过（on server）</h1><p>这种服务器后台不刷新验证码，只要抓包后不放包就可以一直用<br>抓包看看<br><img src="/images/article/20240419/Pasted%20image%2020240415143708.png"><br>抓包带上验证码，试试爆破<br><img src="/images/article/20240419/Pasted%20image%2020240415143733.png"><br>配置啥的和上面一样都是交叉爆破<br><img src="/images/article/20240419/Pasted%20image%2020240415143755.png"><br>最后同样爆破出来的，这里是因为验证码不变，可以无限复用</p><h1 id="验证码绕过（on-client）"><a href="#验证码绕过（on-client）" class="headerlink" title="验证码绕过（on client）"></a>验证码绕过（on client）</h1><p>这里和上面一样，也是用验证码直接爆破就行<br><img src="/images/article/20240419/Pasted%20image%2020240415144806.png"><br>这里的不同是将验证码的生成规则直接写在了前端<br><img src="/images/article/20240419/Pasted%20image%2020240415145155.png"><br>当然这里使用随机数实现的验证码，如果是基于时间戳之类的还可以用 python 脚本发包来爆破</p><h1 id="token-防爆破"><a href="#token-防爆破" class="headerlink" title="token 防爆破"></a>token 防爆破</h1><p>这里加入了 token，也是一种校验用的东西，带上它，就可以一定程度上防止爆破</p><blockquote><p>简单来说 token 就是服务器给客户端发的身份证，客户端发请求时要带上这个身份证，不然就是不合法请求</p></blockquote><p><img src="/images/article/20240419/Pasted%20image%2020240415145629.png"><br>这里我们再用相同的方法去爆破，可以看到提示 token 失败<br><img src="/images/article/20240419/Pasted%20image%2020240415152021.png"></p><p>带上 token 爆破<br><img src="/images/article/20240419/Pasted%20image%2020240415153704.png"><br>这里像这样单线程跑整个爆破<br><img src="/images/article/20240419/Pasted%20image%2020240415153841.png"><br>然后加一个 grep，点击add<br><img src="/images/article/20240419/Pasted%20image%2020240415153914.png"><br>点击 refetch，然后搜索token<br><img src="/images/article/20240419/Pasted%20image%2020240415153959.png"><br>选中 value 所指的值，然后点击 ok<br><img src="/images/article/20240419/Pasted%20image%2020240415155407.png"><br>然后回到 payload 中，选择 3，然后 payload 类型选择从 grep 中获取，然后填入第一个 token<br><img src="/images/article/20240419/Pasted%20image%2020240415151252.png"><br>效率很慢，但是这里的 root root 的时候会提示账号密码不存在，也就是说 token 是生效的<br>突然想起来，这里爆破类型选择了这个<br><img src="/images/article/20240419/Pasted%20image%2020240415154232.png"><br>简单理解一下，假如有两个等待爆破的参数<br>他们的字典都是</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">root</span><br><span class="line">admin</span><br><span class="line">123456</span><br></pre></td></tr></table></figure><p>Cluster bomb 的爆破就是</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">| root  | root   |</span><br><span class="line">| root  | admin  |</span><br><span class="line">| root  | 123456 |</span><br><span class="line">| admin | root   |</span><br><span class="line">| admin | admin  |</span><br><span class="line">| admin | 123456 |</span><br></pre></td></tr></table></figure><p>Pitchfork 则是</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">| root  | root   |</span><br><span class="line">| admin | admin  |</span><br><span class="line">| 123456 | 123456 |</span><br></pre></td></tr></table></figure><p>所以这里应该选择 Pitchfork<br><img src="/images/article/20240419/Pasted%20image%2020240415155547.png"><br>同时我这里减少爆破项，减少爆破时间<br><img src="/images/article/20240419/Pasted%20image%2020240415155640.png"><br>得到 admin 的密码 123456</p><p>参考文章：<br><a href="https://blog.csdn.net/weixin_39190897/article/details/86539542">渗透测试-验证码的爆破与绕过</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;基于表单的暴力破解&quot;&gt;&lt;a href=&quot;#基于表单的暴力破解&quot; class=&quot;headerlink&quot; title=&quot;基于表单的暴力破解&quot;&gt;&lt;/a&gt;基于表单的暴力破解&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/images/article/20240419/Pasted%</summary>
+      
+    
+    
+    
+    <category term="web" scheme="https://corsnail.github.io/categories/web/"/>
+    
+    
+    <category term="pikachu" scheme="https://corsnail.github.io/tags/pikachu/"/>
+    
+  </entry>
   
   <entry>
     <title>VenomCTF REWP</title>
