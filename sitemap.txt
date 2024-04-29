@@ -1,3 +1,4 @@
+https://corsnail.github.io/2024/04/29/pikachu%E4%B9%8BXSS/
 https://corsnail.github.io/2024/04/25/pikachu%E4%B9%8BCSRF/
 https://corsnail.github.io/2024/04/25/pikachu%E4%B9%8BRCE/
 https://corsnail.github.io/2024/04/24/paluctf/
